@@ -2,7 +2,7 @@
 
 ### Getting started
 
-1. Go to this link to download db.sqlite3 and copy and paste it into the root directory.
+1. Go to this [link](https://www.dropbox.com/sh/o2fpjaj4fjp7wqa/AAD9gR9-0NcKpZxvDupFtHEHa?dl=0) to download db.sqlite3 and copy and paste it into the root directory.
 2. Initialize a virtual environment by running `virtualenv env`. If it succeeds, proceed to step 5.
 3. Install virtualenv with pip if you don't already have it.
 4. Install pip if you don't already have it.
@@ -11,6 +11,8 @@
 7. `./manage.py migrate`
 8. `./manage.py collectstatic`
 9. `./manage.py runserver`
+
+### Next step
 
 Now you can proceed to the browser and check the following urls:
 1. http://127.0.0.1:8000/amdin
