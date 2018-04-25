@@ -4,8 +4,8 @@
 
 1. Go to this [link](https://www.dropbox.com/sh/o2fpjaj4fjp7wqa/AAD9gR9-0NcKpZxvDupFtHEHa?dl=0) to download db.sqlite3 and copy and paste it into the root directory.
 2. Initialize a virtual environment by running `virtualenv env`. If it succeeds, proceed to step 5.
-3. Install virtualenv with pip if you don't already have it.
-4. Install pip if you don't already have it.
+3. Install pip with `curl -O https://bootstrap.pypa.io/get-pip.py` `sudo python get-pip.py`.
+4. Install virtualenv with `sudo pip install virtualenv`.
 5. `source env/bin/activate`
 7. `pip install -r requirements.txt`
 8. Create an admin user by typing `python manage.py createsuperuser` in the root directory.
