@@ -16,7 +16,7 @@
 ### Next step
 
 Now you can proceed to the browser and check the following urls:
-1. http://127.0.0.1:8000/amdin
+1. http://127.0.0.1:8000/admin
 2. http://127.0.0.1:8000/call_schedules
 
 The first url is where you can locate all the existing models in the apps and the second url gives an example flow for api_1 app. Please read further instructions in each app to find more details.
