@@ -6,6 +6,10 @@
     margin-top: 2%;
 }
 
+.vertical-spacing-5 {
+    margin-top: 5%;
+}
+
 .hide-content {
     display: none;
 }
