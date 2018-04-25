@@ -21,6 +21,8 @@ Now you can proceed to the browser and check the following urls:
 
 The first url is where you can locate all the existing models in the apps and the second url gives an example flow for api_1 app. Please read further instructions in each app to find more details.
 
+IMPORTANT: please go to 'test' folder in each app ('api_1' and 'api_2') to complete writing unit tests.
+
 ### How to run test
 
 You can test each test case after writing it by tying the following:
