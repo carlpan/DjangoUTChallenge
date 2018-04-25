@@ -1,0 +1,46 @@
+<li class="list-group-item">
+    {% if has_call_schedule %}
+        <h5 class="margin-vertical">Your has proposed the following times for a future coaching session:</h5>
+            {% for time_slot in time_slots %}
+                <div class="call-schedule">
+                    <p>
+                        {{ time_slot.duration }} mins coaching session at {{ time_slot.time_info_1 }} {{ time_slot.timezone_shorthand }} on {{ time_slot.time_info_2 }}
+                    </p>
+                    <button id="removeCall-{{ time_slot.id }}" type="button" class="btn btn-danger remove-time-slot-button" value="{{ time_slot.order }}" data-identifier="{{ call_schedule_identifier }}">x</button>
+                    <button id="acceptCall-{{ time_slot.id }}" type="button" class="btn btn-success accept-time-slot-button" value="{{ time_slot.order }}" data-identifier="{{ call_schedule_identifier }}">Accept</button>
+                </div>
+            {% endfor %}
+        {% if time_slots|length < 3 %}
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addSingleTimeModal">Add a new time</button>
+                </div>
+            </div>
+        {% endif %}
+    {% else %}
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button id="scheduleCall" type="button" class="btn btn-primary" data-toggle="modal" data-target="#scheduleCallModal">Schedule a one-time coaching session</button>
+            </div>
+        </div>
+    {% endif %}
+    {% if call_schedule_identifier %}
+        <input type="hidden" id="callScheduleIdentifier" value="{{ call_schedule_identifier }}">
+    {% else %}
+        <input type="hidden" id="callScheduleIdentifier">
+    {% endif %}
+</li>
+{% if scheduled_call_appointments %}
+    <li class="list-group-item">
+        <h5 class="margin-vertical"> Completed Coaching Sessions:</h5>
+        <div>
+            {% for scheduled_call in scheduled_call_appointments %}
+                <div class="call-schedule">
+                    <div class="d-table-row">
+                        <p>Completed call appointment on {{ scheduled_call.time_slot_local }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </li>
+{% endif %}

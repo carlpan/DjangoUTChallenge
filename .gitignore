@@ -1,0 +1,10 @@
+*.pyc
+*.swp
+.cache
+public_root
+env*/
+.DS_Store
+.env*
+.idea
+db.sqlite3
+.pytest_cache/

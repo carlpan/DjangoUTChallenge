@@ -1,0 +1,65 @@
+.margin-vertical {
+    margin-top: 22px;
+}
+
+.vertical-spacing-3 {
+    margin-top: 2%;
+}
+
+.hide-content {
+    display: none;
+}
+
+.conferenceCallSchedulerFormAll .input-group {
+    margin: 10px 0;
+}
+
+.conferenceCallSchedulerFormAll .form-control {
+    margin: 0 10px;
+}
+
+.wrapper img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;
+    margin-left: -60px;
+}
+
+.bg_load {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #EEE;
+    opacity: 0.6;
+}
+
+.call-schedule p, .call-schedule button {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.call-schedule p {
+    width: 80%;
+}
+
+.call-schedule {
+    margin: 4% 0;
+    display: table;
+    width: 100%;
+}
+
+.call-schedule button {
+    width: 50px;
+    margin-right: 5px;
+    padding: 2px 4px;
+    font-size: 12px;
+}
+
+.d-table-row {
+    display: table-row;
+}
