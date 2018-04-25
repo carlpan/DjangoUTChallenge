@@ -6,5 +6,6 @@ env*/
 .DS_Store
 .env*
 .idea
+.coverage
 db.sqlite3
 .pytest_cache/
