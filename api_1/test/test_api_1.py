@@ -61,6 +61,7 @@ class API1TestCase(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'call_schedule_detail.html')
 
+        # without order and identifier, it should respond 400
         response2 = self.client.post(reverse("accept_remove_time_slot"), {
             'for_accept': 0
         })
