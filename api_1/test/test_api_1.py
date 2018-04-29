@@ -47,7 +47,7 @@ class API1TestCase(TestCase):
         })
         self.assertEqual(response2.status_code, 400)
 
-    def test_call_schedules(self):
+    def test_conference_call_schedules(self):
         response = self.client.get(reverse("conference_call_schedules"))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'call_schedule.html')
@@ -75,6 +75,12 @@ class API1TestCase(TestCase):
         })
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'call_schedule_detail.html')
+
+        # without order and identifier, it should respond 400
+        response2 = self.client.post(reverse("add_single_time_slot"), {
+            'for_accept': 0
+        })
+        self.assertEquals(response2.status_code, 400)
 
     """
     Write rest of the tests below
