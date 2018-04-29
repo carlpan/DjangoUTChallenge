@@ -9,8 +9,8 @@ from django.http import HttpResponseBadRequest, HttpResponse
 from api_2.models import Question, QuestionAnswer, UserAggregatedResult
 
 """
-Imagine a user is doing some assessment that contains 5 questions. Each question is 
-related to a skill and the answer is value between 0-100. The api below takes in 
+Imagine a user is doing some assessment that contains 5 questions. Each question is
+related to a skill and the answer is value between 0-100. The api below takes in
 user's answers and save them, in addition, it dispatches a method to gather each answer
 and calculates average answer for the user.
 Please refer to admin page to see some existing data to get a sense of what the api does.
@@ -36,6 +36,7 @@ def save_assessment(request):
                     question=question,
                     answer=answer
                 )
+                answers_count += 1
             except (ObjectDoesNotExist, ValueError):
                 pass
         if answers_count >= 5:

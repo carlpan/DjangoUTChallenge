@@ -20,7 +20,7 @@ TIME_ZONE = "America/Los_Angeles"
 Imagine you are using a scheduling system to schedule a call with someone.
 The system requires user to suggest three times, the user can then remove the times.
 When a time is removed, user can then add a new time to keep three call times.
-For the sake of writing unit tests, the user can also accept the time. When a call is 
+For the sake of writing unit tests, the user can also accept the time. When a call is
 accepted, a signal (in signals.py) is triggered to create a call appointment entry in database.
 Please go to route /call_schedules/ to play with the flow.
 Please also refer to admin page for model definitions.
