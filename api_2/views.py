@@ -36,6 +36,7 @@ def save_assessment(request):
                     question=question,
                     answer=answer
                 )
+                answers_count += 1
             except (ObjectDoesNotExist, ValueError):
                 pass
         if answers_count >= 5:
